@@ -24,5 +24,8 @@
   "homepage": "https://github.com/JorgenVatle/nginx-cf-realip#readme",
   "dependencies": {
     "typescript": "^3.3.3333"
+  },
+  "devDependencies": {
+    "@types/node": "^11.9.5"
   }
 }
