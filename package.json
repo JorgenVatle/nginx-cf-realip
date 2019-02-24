@@ -1,0 +1,25 @@
+{
+  "name": "nginx-cf-realip",
+  "version": "1.0.0",
+  "description": "Command line utility for updating NGINX real-ip rules for CloudFlare's IPs",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JorgenVatle/nginx-cf-realip.git"
+  },
+  "keywords": [
+    "nginx",
+    "realip",
+    "cloudflare",
+    "set_real_ip_from"
+  ],
+  "author": "Jørgen Vatle (Jorgen@WcAServices.net)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JorgenVatle/nginx-cf-realip/issues"
+  },
+  "homepage": "https://github.com/JorgenVatle/nginx-cf-realip#readme"
+}
