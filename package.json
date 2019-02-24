@@ -28,6 +28,9 @@
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
-    "@types/node": "^11.9.5"
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.9.5",
+    "mocha": "^6.0.1",
+    "ts-mocha": "^6.0.0"
   }
 }
