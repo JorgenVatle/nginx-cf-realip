@@ -4,7 +4,7 @@
   "description": "Command line utility for updating NGINX real-ip rules for CloudFlare's IPs",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha dist/**/*.spec.js",
     "watch": "tsc --watch"
   },
   "repository": {
