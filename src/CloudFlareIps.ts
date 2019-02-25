@@ -38,4 +38,16 @@ export default class CloudFlareIps {
     public async getArray(version: ipVersion): Promise<Array<string>> {
         return this.listToArray(await this.getList(version));
     }
+
+    /**
+     * All available CloudFlare IPs.
+     */
+    public get all(): Promise<Array<string>> {
+        return new Promise(async (resolve, reject) => {
+            const v4 = await this.getArray(4);
+            const v6 = await this.getArray(6);
+
+            resolve([...v4, ...v6]);
+        })
+    }
 }
