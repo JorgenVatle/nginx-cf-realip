@@ -1,6 +1,7 @@
 import FS from 'fs';
 import Path from 'path';
 import Commander from 'commander';
+import Chalk from 'chalk';
 import NginxRealip from "./NginxRealip";
 
 const realip = new NginxRealip();
@@ -27,7 +28,7 @@ realip.buildConfig(cli.header).then((config) => {
         base,
     }), config);
 }).catch((err) => {
-    console.error(`Could not create NGINX realip file for the provided path: ${cli.destination}`);
-    console.log('Check the destination path and try again. (Hint: Try to use just ".")');
-    console.log('Use "--help" to view a list of options')
+    console.error(Chalk.bgRed(`Could not create NGINX realip file for the provided path:`), Chalk.underline(cli.destination));
+    console.log(`Check the destination path and try again. ${Chalk.blue(`(Hint: Try to use just ${Chalk.yellow('-p .')})`)}`);
+    console.log(`Use ${Chalk.yellow('--help')} to view a list of options`)
 });
