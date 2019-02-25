@@ -26,4 +26,8 @@ realip.buildConfig(cli.header).then((config) => {
         dir: cli.destination,
         base,
     }), config);
+}).catch((err) => {
+    console.error(`Could not create NGINX realip file for the provided path: ${cli.destination}`);
+    console.log('Check the destination path and try again. (Hint: Try to use just ".")');
+    console.log('Use "--help" to view a list of options')
 });
