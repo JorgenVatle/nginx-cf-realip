@@ -42,4 +42,10 @@ describe('cloudflare ips', () => {
         ).toBeTruthy();
         expect(rangeCheck.isRange(ip)).toBeTruthy();
     });
+
+    it('all fetched ip ranges are valid', async () => {
+        (await ips.all()).forEach((ip: string) => {
+            expect(rangeCheck.isRange(ip)).toBe(true);
+        })
+    });
 });
