@@ -1,4 +1,4 @@
-# Recover CloudFlare visitor IPs in NGINX
+# Recover CloudFlare visitor IPs with NGINX
 Update your CloudFlare realip list with a simple commandline utility.
 
 ### Why?
