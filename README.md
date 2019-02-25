@@ -38,7 +38,7 @@ Create a `cf-realip.conf` file in the current directory:
 nginx-cf-realip
 ```
 
-You can also define a desitnation path:
+You can also define a destination path:
 ```bash
 nginx-cf-realip -d /etc/nginx   # -d can be either a file or directory path.
 ```
