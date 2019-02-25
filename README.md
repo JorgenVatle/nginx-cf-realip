@@ -43,6 +43,15 @@ You can also define a destination path:
 nginx-cf-realip -d /etc/nginx   # -d can be either a file or directory path.
 ```
 
+Then, include your generated `cf-realip.conf` file in your NGINX configuration. (Default path: `/etc/nginx/nginx.conf`)
+```nginx
+http {
+    # ...
+    include /etc/nginx/cf-realip.conf;
+    # ...
+}
+```
+
 ## License
 This repository is licensed under the ISC license.
 
