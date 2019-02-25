@@ -1,6 +1,8 @@
 import Axios from 'axios';
 
-export default class CloudFlareRealip {
+type ipVersion = 6 | 4;
+
+export default class CloudFlareIps {
 
     /**
      * Axios instance for CloudFlare
@@ -14,7 +16,7 @@ export default class CloudFlareRealip {
      *
      * @param version
      */
-    protected async getIpList(version: 6 | 4) {
+    protected async getIpList(version: ipVersion) {
         const request = await this.cloudflare.get(`/ips-v${version}`);
         return request.data;
     }
