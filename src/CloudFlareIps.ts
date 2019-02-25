@@ -20,4 +20,23 @@ export default class CloudFlareIps {
         const request = await this.cloudflare.get(`/ips-v${version}`);
         return request.data;
     }
+
+    /**
+     * Fetch an array of IPs for the given IP version.
+     *
+     * @param version
+     */
+    protected async getIpArray(version: ipVersion) {
+        return this.listToArray(await this.getIpList(version));
+    }
+
+    /**
+     * Convert a list separated by linebreaks to an array.
+     *
+     * @param list
+     */
+    protected listToArray(list: string) {
+        return list.split(/\n/);
+    }
+
 }
