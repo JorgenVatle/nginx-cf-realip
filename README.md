@@ -1,7 +1,15 @@
 # nginx-cf-realip
 Update your CloudFlare realip list with a simple commandline utility.
 
-See [https://support.cloudflare.com/hc/en-us/articles/200170706-How-do-I-restore-original-visitor-IP-with-Nginx-](https://support.cloudflare.com/hc/en-us/articles/200170706-How-do-I-restore-original-visitor-IP-with-Nginx-) for an example file.
+### Why?
+CloudFlare essentially acts as a reverse proxy for your website, meaning requests to your servers served by CloudFlare,
+are in fact coming from CloudFlare's servers not your visitors. This means that in certain situations, such as for
+your NGINX access logs you'll see CloudFlare's IP addresses instead of your visitors'. This can be problematic for
+services that rely on visitor's true IP addresses. Particularly if you're relying on a fraud prevention system that
+requires visitor IPs.
+
+See [https://support.cloudflare.com/hc/en-us/articles/200170706-How-do-I-restore-original-visitor-IP-with-Nginx-](CloudFlare's support article on the topic) 
+for a much better explaination.
 
 ### Requirements
 - [npm](https://www.npmjs.com/get-npm) v4.6.1 or higher.
