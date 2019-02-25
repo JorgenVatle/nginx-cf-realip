@@ -18,7 +18,7 @@ This package helps you keep CloudFlare's list or IP addresses updated with a sim
 
 ## Installation
 ```bash
-npm install -g nginx-cf-realip
+$ npm install -g nginx-cf-realip
 ```
 ## Options
 ```text
@@ -35,12 +35,12 @@ Options:
 
 Create a `cf-realip.conf` file in the current directory:
 ```bash
-nginx-cf-realip
+$ nginx-cf-realip
 ```
 
 You can also define a destination path:
 ```bash
-nginx-cf-realip -d /etc/nginx   # -d can be either a file or directory path.
+$ nginx-cf-realip -d /etc/nginx   # -d can be either a file or directory path.
 ```
 
 Then, include your generated `cf-realip.conf` file in your NGINX configuration. (Default path: `/etc/nginx/nginx.conf`)
