@@ -25,6 +25,7 @@
   "homepage": "https://github.com/JorgenVatle/nginx-cf-realip#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "range_check": "^1.4.0",
     "typescript": "^3.3.3333"
   },
   "devDependencies": {
