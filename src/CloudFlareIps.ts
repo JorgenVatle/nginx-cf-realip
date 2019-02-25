@@ -35,7 +35,7 @@ export default class CloudFlareIps {
      *
      * @param version
      */
-    public async getArray(version: ipVersion) {
+    public async getArray(version: ipVersion): Promise<Array<string>> {
         return this.listToArray(await this.getList(version));
     }
 }
