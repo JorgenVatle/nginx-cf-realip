@@ -16,7 +16,7 @@ export default class CloudFlareIps {
      *
      * @param version
      */
-    protected async getIpList(version: ipVersion) {
+    protected async getList(version: ipVersion) {
         const request = await this.cloudflare.get(`/ips-v${version}`);
         return request.data;
     }
@@ -35,7 +35,7 @@ export default class CloudFlareIps {
      *
      * @param version
      */
-    public async getIpArray(version: ipVersion) {
-        return this.listToArray(await this.getIpList(version));
+    public async getArray(version: ipVersion) {
+        return this.listToArray(await this.getList(version));
     }
 }
