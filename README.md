@@ -27,3 +27,8 @@ You can also define a desitnation path:
 ```bash
 nginx-cf-realip -d /etc/nginx   # -d can be either a file or directory path.
 ```
+
+## License
+This repository is licensed under the ISC license.
+
+Copyright (c) 2019, Jørgen Vatle.
