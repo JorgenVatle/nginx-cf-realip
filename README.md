@@ -1,6 +1,11 @@
 # nginx-cf-realip
 Update your CloudFlare realip list with a simple commandline utility.
 
+See [https://support.cloudflare.com/hc/en-us/articles/200170706-How-do-I-restore-original-visitor-IP-with-Nginx-](https://support.cloudflare.com/hc/en-us/articles/200170706-How-do-I-restore-original-visitor-IP-with-Nginx-) for an example file.
+
+### Requirements
+- [npm](https://www.npmjs.com/get-npm) v4.6.1 or higher.
+
 ## Installation
 ```bash
 npm install -g nginx-cf-realip
