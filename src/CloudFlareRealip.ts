@@ -9,4 +9,13 @@ export default class CloudFlareRealip {
         baseURL: 'https://cloudflare.com',
     });
 
+    /**
+     * Fetch a list of IPs for the given IP version.
+     *
+     * @param version
+     */
+    protected async getIpList(version: 6 | 4) {
+        const request = await this.cloudflare.get(`/ips-v${version}`);
+        return request.data;
+    }
 }
