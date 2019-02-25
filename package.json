@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "Command line utility for updating NGINX real-ip rules for CloudFlare's IPs",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "mocha dist/**/*.spec.js",
     "watch": "tsc --watch",
