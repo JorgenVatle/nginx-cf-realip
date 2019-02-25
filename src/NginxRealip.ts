@@ -25,7 +25,7 @@ export default class NginxRealip {
      * @param rules
      */
     protected serialize(rules: Array<string>) {
-        return rules.concat(';\n');
+        return rules.join(';\n');
     }
 
     /**
