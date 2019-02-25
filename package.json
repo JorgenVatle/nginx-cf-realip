@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha dist/**/*.spec.js",
     "watch": "tsc --watch",
-    "postinstall": "tsc"
+    "postinstall": "tsc",
+    "postpublish": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
