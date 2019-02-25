@@ -8,7 +8,7 @@ your NGINX access logs you'll see CloudFlare's IP addresses instead of your visi
 services that rely on visitor's true IP addresses. Particularly if you're relying on a fraud prevention system that
 requires visitor IPs.
 
-See [https://support.cloudflare.com/hc/en-us/articles/200170706-How-do-I-restore-original-visitor-IP-with-Nginx-](CloudFlare's support article on the topic) 
+See [CloudFlare's support article on the topic](https://support.cloudflare.com/hc/en-us/articles/200170706-How-do-I-restore-original-visitor-IP-with-Nginx-) 
 for a much better explaination.
 
 ### Requirements
