@@ -23,4 +23,12 @@ describe('cloudflare ips', () => {
         const ipv6Array = await ips.getArray(6);
         expect(ipv6Array.length).toBeGreaterThan(0);
     });
+
+    it('fetches valid ipv4 ranges', async () => {
+        const ipv4Array = await ips.getArray(4);
+        console.log(ipv4Array[0]);
+        expect(
+            ipv4Array[0].match(/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/([0-9]|[1-6][0-9])$/)
+        ).toBeTruthy();
+    });
 });
