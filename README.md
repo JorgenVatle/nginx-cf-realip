@@ -11,6 +11,8 @@ requires visitor IPs.
 See [CloudFlare's support article on the topic](https://support.cloudflare.com/hc/en-us/articles/200170706-How-do-I-restore-original-visitor-IP-with-Nginx-) 
 for a much better explaination.
 
+This package helps you keep CloudFlare's list or IP addresses updated with a simple command: `nginx-cf-realip`.
+
 ### Requirements
 - [npm](https://www.npmjs.com/get-npm) v4.6.1 or higher.
 
