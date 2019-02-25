@@ -2,7 +2,7 @@
 Update your CloudFlare realip list with a simple commandline utility.
 
 ### Why?
-CloudFlare essentially acts as a reverse proxy for your website, meaning requests to your servers served by CloudFlare,
+CloudFlare essentially acts as a reverse proxy for your website, meaning requests to your servers served by CloudFlare
 are in fact coming from CloudFlare's servers not your visitors. This means that in certain situations, such as for
 your NGINX access logs you'll see CloudFlare's IP addresses instead of your visitors'. This can be problematic for
 services that rely on visitor's true IP addresses. Particularly if you're relying on a fraud prevention system that
