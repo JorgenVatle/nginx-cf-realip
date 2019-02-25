@@ -1,5 +1,7 @@
 import CloudFlareIps from "./CloudFlareIps";
 
+type RealipHeader = 'CF-Connecting-IP' | 'X-Forwarded-For' | string;
+
 export default class NginxRealip {
 
     /**
@@ -26,4 +28,10 @@ export default class NginxRealip {
         return rules.concat(';\n');
     }
 
+    /**
+     * Build NGINX configuration for the given realip header.
+     */
+    public async buildConfig(realipHeader: RealipHeader = 'CF-Connecting-IP') {
+        return this.serialize([...await this.rules(), `real_ip_header ${realipHeader}`]);
+    }
 }
