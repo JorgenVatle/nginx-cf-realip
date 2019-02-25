@@ -22,15 +22,6 @@ export default class CloudFlareIps {
     }
 
     /**
-     * Fetch an array of IPs for the given IP version.
-     *
-     * @param version
-     */
-    protected async getIpArray(version: ipVersion) {
-        return this.listToArray(await this.getIpList(version));
-    }
-
-    /**
      * Convert a list separated by linebreaks to an array.
      *
      * @param list
@@ -39,4 +30,12 @@ export default class CloudFlareIps {
         return list.split(/\n/);
     }
 
+    /**
+     * Fetch an array of IPs for the given IP version.
+     *
+     * @param version
+     */
+    public async getIpArray(version: ipVersion) {
+        return this.listToArray(await this.getIpList(version));
+    }
 }
