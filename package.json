@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha dist/**/*.spec.js",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "postinstall": "tsc"
   },
   "repository": {
     "type": "git",
@@ -39,5 +40,9 @@
     "@types/node": "^11.9.5",
     "expect": "^24.1.0",
     "mocha": "^6.0.1"
+  },
+  "bin": {
+    "nginx-cf-realip": "./bin/run",
+    "cf-realip": "./bin/run"
   }
 }
