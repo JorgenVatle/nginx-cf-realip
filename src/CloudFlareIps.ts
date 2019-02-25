@@ -16,7 +16,7 @@ export default class CloudFlareIps {
      *
      * @param version
      */
-    protected async getList(version: ipVersion) {
+    public async getList(version: ipVersion): Promise<string> {
         const request = await this.cloudflare.get(`/ips-v${version}`);
         return request.data;
     }
