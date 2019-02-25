@@ -27,8 +27,10 @@ realip.buildConfig(cli.header).then((config) => {
         dir: cli.destination,
         base,
     }), config);
-}).catch((err) => {
-    console.error(Chalk.bgRed(`Could not create NGINX realip file for the provided path:`), Chalk.underline(cli.destination));
+}).catch((exception) => {
+    console.debug(Chalk.red(exception) + '\n');
+    console.error(Chalk.bgRed(`Could not create NGINX realip file for the provided path`));
+    console.log(Chalk.underline(cli.destination + '\n'));
     console.log(`Check the destination path and try again. ${Chalk.blue(`(Hint: Try to use just ${Chalk.yellow('-p .')})`)}`);
-    console.log(`Use ${Chalk.yellow('--help')} to view a list of options`)
+    console.log(`Use ${Chalk.yellow('--help')} to view a list of options\n`);
 });
