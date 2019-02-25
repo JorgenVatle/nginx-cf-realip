@@ -29,8 +29,7 @@
     "axios": "^0.18.0",
     "chalk": "^2.4.2",
     "commander": "^2.19.0",
-    "range_check": "^1.4.0",
-    "typescript": "^3.3.3333"
+    "range_check": "^1.4.0"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
@@ -40,7 +39,8 @@
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.9.5",
     "expect": "^24.1.0",
-    "mocha": "^6.0.1"
+    "mocha": "^6.0.1",
+    "typescript": "^3.3.3333"
   },
   "bin": {
     "nginx-cf-realip": "./bin/run",
