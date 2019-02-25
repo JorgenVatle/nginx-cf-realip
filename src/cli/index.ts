@@ -2,10 +2,10 @@ import FS from 'fs';
 import Path from 'path';
 import Commander from 'commander';
 import Chalk from 'chalk';
-import NginxRealip from "./NginxRealip";
+import NginxRealip from "../NginxRealip";
 
 const realip = new NginxRealip();
-const cli = Commander.version(require('../package.json').version)
+const cli = Commander.version(require('../../package.json').version)
     .option('-d, --destination <path>', 'Destination path for NGINX realip list.', './cf-realip.conf')
     .option('-h, --header <header>', 'Header to fetch realip from.', 'CF-Connecting-IP')
     .parse(process.argv);
