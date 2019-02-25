@@ -7,7 +7,7 @@
   "scripts": {
     "test": "mocha dist/**/*.spec.js",
     "watch": "tsc --watch",
-    "prepublish": "tsc",
+    "prepublish": "tsc && npm run test",
     "postpublish": "git push && git push --tags"
   },
   "repository": {
