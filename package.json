@@ -1,6 +1,6 @@
 {
   "name": "nginx-cf-realip",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Command line utility for updating NGINX real-ip rules for CloudFlare's IPs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
