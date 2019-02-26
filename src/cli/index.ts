@@ -5,9 +5,10 @@ import Chalk from 'chalk';
 import NginxRealip from "../NginxRealip";
 
 const realip = new NginxRealip();
-const cli = Commander.version(require('../../package.json').version)
+const cli = Commander
     .option('-d, --destination <path>', 'Destination path for NGINX realip list.', './cf-realip.conf')
     .option('-h, --header <header>', 'Header to fetch realip from.', 'CF-Connecting-IP')
+    .version(require('../../package.json').version)
     .parse(process.argv);
 
 if (!process.argv.slice(2).length) {
