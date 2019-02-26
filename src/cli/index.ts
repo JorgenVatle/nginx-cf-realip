@@ -12,7 +12,7 @@ const cli = Commander
     .parse(process.argv);
 
 realip.buildConfig(cli.header).then((config) => {
-    let base = '.';
+    let base;
 
     try {
         if (FS.lstatSync(cli.destination).isDirectory()) {
