@@ -12,22 +12,17 @@ const cli = Commander
     .parse(process.argv);
 
 realip.buildConfig(cli.header).then((config) => {
-    let base;
+    let path = Path.resolve(cli.destination);
 
     try {
-        if (FS.lstatSync(cli.destination).isDirectory()) {
-            base = 'cf-realip.conf';
+        if (FS.lstatSync(path).isDirectory()) {
+            path = Path.join(path, 'cf-realip.conf');
         }
     } catch {}
 
-    const path = Path.format({
-        dir: cli.destination,
-        base,
-    });
-
     FS.writeFileSync(path, config);
 
-    console.log(Chalk.green('\nAdded updated CloudFlare realip file to:'), Path.resolve(path));
+    console.log(Chalk.green('\nAdded updated CloudFlare realip file to:'), path);
 }).catch((exception) => {
     console.debug(Chalk.red(exception) + '\n');
     console.error(Chalk.bgRed(`Could not create NGINX realip file for the provided path`));
