@@ -11,10 +11,6 @@ const cli = Commander
     .version(require('../../package.json').version)
     .parse(process.argv);
 
-if (!process.argv.slice(2).length) {
-    Commander.help();
-}
-
 realip.buildConfig(cli.header).then((config) => {
     let base = '.';
 
